@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:15
+    restart: always
     container_name: postgres_container
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
@@ -10,12 +11,11 @@ services:
       - 5432:5432
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
-    restart: unless-stopped
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin_container
     environment:
-      PGADMIN_DAFAULT_EMAIL: ${PGADMIN_DAFAULT_EMAIL}
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
       - 5050:80
