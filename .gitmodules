@@ -1,0 +1,12 @@
+[submodule "docker/frontend"]
+	path = docker/frontend
+	url = git@github.com:papitapapita/recipe-app-frontend.git
+[submodule "docker/backend"]
+	path = docker/backend
+	url = git@github.com:papitapapita/recipe-app-backend.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:papitapapita/recipe-app-frontend.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:papitapapita/recipe-app-backend.git
